@@ -11,3 +11,7 @@ Route::get('/', function () {
 Route::get('/chat', [ChatController::class, 'index']);
 
 Route::post('/send-message', [ChatController::class, 'sendMessage']);
+
+Route::get('/arrow', function () {
+    return Inertia::render('Arrow');
+})->name('Arrow');
